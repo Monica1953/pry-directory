@@ -8,11 +8,15 @@
         <div class="col-sm-5">
             <h3>User Details</h3>
             <br>
-            <form>
+            <form [formGroup]="valForm" (ngSubmit)="onSubmit()">
                 <div class="form-row ">
                     <div class="form-group col-md-12">
-                        <input type="text" name="fullName" formControlName="fullName" [ngClass]="{'is-invalid': valFormUsuario.get('fullName').touched && valFormUsuario.get ('fullName').invalid}" class="form-control" placeholder="Full Name *">
+                        <input type="text" name="fullName" formControlName="fullName" [ngClass]="{ 'is-invalid': submitted && f.fullName.errors }" class="form-control" placeholder="Full Name *">
+                        <div *ngIf="submitted && f.fullName.errors" class="invalid-feedback">
+                            <div *ngIf="f.fullName.errors.required">fullName is required</div>
+                        </div>
                     </div>
+
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-12">
@@ -21,9 +25,11 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1">Your Birthday *</span>
                             </div>
-                            <input type="date" class="form-control" id="inputAddress" placeholder="Your Birthday *">
+                            <input type="date" formControlName="cumple" class="form-control" id="inputAddress" placeholder="Your Birthday *" [ngClass]="{ 'is-invalid': submitted && f.cumple.errors }">
+                            <div *ngIf="submitted && f.cumple.errors" class="invalid-feedback">
+                                <div *ngIf="f.cumple.errors.required">Birthday is required</div>
+                            </div>
                         </div>
-
 
                     </div>
                 </div>
@@ -54,7 +60,10 @@
                     </div>
                     <div class="form-group col-md-8">
 
-                        <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                        <input type="text" class="form-control" id="inputPhone" formControlName="phone" placeholder="Phone" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" number>
+                        <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                            <div *ngIf="f.phone.errors.number">phone is number</div>
+                        </div>
                     </div>
                 </div>
                 <div class="form-row">
@@ -71,7 +80,7 @@
         <div class="col-sm-5">
             <h3>Account Details</h3>
             <br>
-            <form>
+            <form [formGroup]="valFormAccount" (ngSubmit)="onSubmitAccount()">
                 <div class="form-row ">
                     <div class="form-group col-md-12">
                         <input type="text" class="form-control" id="inputUserName" placeholder="User Name *">
@@ -89,7 +98,7 @@
                 </div>
                 <div class="form-row ">
                     <div class="form-group col-md-12">
-                        <input type="text" class="form-control" id="inputConfirmPass" placeholder="Confirm Password *">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Confirm Password *">
                     </div>
                 </div>
                 <div class="form-row ">

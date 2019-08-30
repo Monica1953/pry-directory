@@ -1,0 +1,10 @@
+.img-gine {
+    content: url('src/assets/image/femaile1.png');
+    border-radius: 50%
+}
+
+.sub-txt {
+    display: block;
+    font-size: 80%;
+    color: #6c757d;
+}

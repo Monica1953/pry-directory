@@ -1,0 +1,41 @@
+<app-employe-header></app-employe-header>
+<br><br><br>
+
+<!-- <div *ngIf="employee"> -->
+<div class="card">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <div class="row ">
+                <div class="col-md-2 mb-0 mt-4">
+                    <img class="card-img-top img-gine" src="src/assets/image/femaile1.png" alt="Card image cap">
+                </div>
+                <div class="col-md-8 px-3 ">
+                    <div class="card-body row align-items-center">
+                        <blockquote class="blockquote mb-0 mt-4">
+                            <h4 class="card-title ">{{employee.name}} {{employee.firstName}}</h4>
+                            <p class="sub-txt">{{employee.position}}</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <h5 class="card-title ">Call Office</h5>
+            <p class="sub-txt">{{employee.telephone}}</p>
+        </li>
+        <li class="list-group-item">
+            <h5 class="card-title ">Call Mobile</h5>
+            <p class="sub-txt">{{employee.phone}}</p>
+        </li>
+        <li class="list-group-item">
+            <h5 class="card-title ">SMS</h5>
+            <p class="sub-txt">{{employee.phone}}</p>
+        </li>
+        <li class="list-group-item">
+            <h5 class="card-title ">Email</h5>
+            <p class="sub-txt">{{employee.email}}</p>
+        </li>
+    </ul>
+</div>
+<!-- </div> -->
+<router-outlet></router-outlet>

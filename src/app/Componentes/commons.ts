@@ -1,0 +1,1 @@
+export const webServiceEndpoint: string = 'http://localhost:8080/baldeoncorp.directory.ws.1.0/';

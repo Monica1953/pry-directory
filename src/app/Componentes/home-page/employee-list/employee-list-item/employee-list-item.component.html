@@ -1,0 +1,17 @@
+<div class="container-fluid py-3 " *ngFor="let item of listEmployee; let i = index">
+    <div class="card" routerLink="/employeeDetails/{{item.codEmployee}}">
+        <div class="row ">
+            <div class="col-md-2 mb-0 mt-4">
+                <img class="card-img-top" src="src/assets/image/femaile1.png" alt="Card image cap">
+            </div>
+            <div class="col-md-8 px-3 ">
+                <div class="card-body row align-items-center">
+                    <blockquote class="blockquote mb-0 mt-4">
+                        <h4 class="card-title ">{{item.name}} {{item.firstName}}</h4>
+                        <p class="sub-txt">{{item.position}} </p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

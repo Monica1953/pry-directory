@@ -1,0 +1,110 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">
+            <img src="src/assets/image/femaile1.png" alt="">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem optio adipisci voluptas illum, fugiat fugit exercitationem ducimus saepe alias maiores!</p>
+        </div>
+        <div class="col-sm-5">
+            <h3>User Details</h3>
+            <br>
+            <form>
+                <div class="form-row ">
+                    <div class="form-group col-md-12">
+                        <input type="text" name="fullName" formControlName="fullName" [ngClass]="{'is-invalid': valFormUsuario.get('fullName').touched && valFormUsuario.get ('fullName').invalid}" class="form-control" placeholder="Full Name *">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Your Birthday *</span>
+                            </div>
+                            <input type="date" class="form-control" id="inputAddress" placeholder="Your Birthday *">
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Gender *</span>
+                            </div>
+                            <select name="id_tipo_insumo" id="tipoInsumo" class="form-control">
+                <option selected="selected" value="sss">Gender</option>
+                <option selected="selected" value="sss">Female</option>
+                <option selected="selected" value="sss">Male</option>
+              </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+
+                        <select name="" id="" class="form-control">
+              <option selected="selected" value="sss">Peru</option>
+              <option selected="selected" value="sss">Chile</option>
+              <option selected="selected" value="sss">Argentina</option>
+            </select>
+                    </div>
+                    <div class="form-group col-md-8">
+
+                        <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+
+                        <textarea class="col-md-12" name="" id="" cols="100" rows="5" placeholder="Tell use about yourself"></textarea>
+                    </div>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="col-sm-5">
+            <h3>Account Details</h3>
+            <br>
+            <form>
+                <div class="form-row ">
+                    <div class="form-group col-md-12">
+                        <input type="text" class="form-control" id="inputUserName" placeholder="User Name *">
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="form-group col-md-12">
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Email *">
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="form-group col-md-12">
+                        <input type="text" class="form-control" id="inputPassword" placeholder="Password *">
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="form-group col-md-12">
+                        <input type="text" class="form-control" id="inputConfirmPass" placeholder="Confirm Password *">
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="form-group col-md-12">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Aceptar condiciones
+                  </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
